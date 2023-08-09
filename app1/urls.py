@@ -13,7 +13,7 @@ urlpatterns = [
     path('profile',profile,name="profile1"),
     path('buynow/',buynow,name="buy"),
     path('ordertable/',ordertable,name="myorder"),
-    # path('razorpayView/',razorpayView,name='razorpayView'),
-    # path('paymenthandler/',paymenthandler,name='paymenthandler'),
+    path('razorpayView/',razorpayView,name='razorpayView'),
+    path('paymenthandler/',paymenthandler,name='paymenthandler'),
     path('successview/',ordersucess,name="orderSuccessView"),
 ]
