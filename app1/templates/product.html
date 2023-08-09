@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block abc %}
+ <!--content-->
+                <div class="col py-3">
+                    <section style="background-color: #eee;">
+                        <div class="container py-5">
+                            <div class="row">
+                                {% for i in data %}
+                                    <div class="col-md-4 col-lg-4 mb-4 mb-lg-0">
+                                        <div class="card">
+                                            <a  href="{% url 'productdetails' i.id  %}">
+                                            <img src="{{i.image.url}}"
+                                                class="card-img-top" height="300px" alt="" />
+                                            <div class="card-body" style="align-self: center;">
+                                                <h5 class="mb-0" style="align-self:center;">{{i.name}}</h5>
+                                                <h5 class="mb-0" style="align-self:center;">{{i.price}}</h5>
+                                            </div> 
+                                        </a>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                            </div>
+                        </div>
+                       
+                    </section>
+                </div>
+               
+                <!--endcontent-->
+{% endblock %}

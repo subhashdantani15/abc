@@ -1,0 +1,47 @@
+
+{% extends 'base.html' %}
+
+{% block abc %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Order</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Product Image</th>
+        <th>Product Name</th>
+        <th>Product Quantity</th>
+        <th>Order Price</th>
+        <th>Order Date</th>
+        <th>Order TransactionId</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in productlist %}
+      <tr>
+        <td><img src="{{i.image.url}}"height="100px "  /></td>
+        <td>{{i.name}}</td>
+        <td>{{i.quantity}}</td>
+        <td>{{i.price}}</td>
+        <td>{{i.date}}</td>
+        <td>{{i.transactionid}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+{% endblock %}

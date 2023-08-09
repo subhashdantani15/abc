@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block abc %}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title> login form </title>
+
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Google fonts -->
+    <link href="//fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+
+</head>
+
+<body>
+    <div class="w3l-loginblock signinform">
+        <div class="logo">
+            <a class="brand-logo" href="index.html">login form</a>
+        </div>
+        <!-- main content -->
+            <div class="row map-content-9">
+                <div class="info-grids">
+                    <form  method="post" class="">
+                        {% csrf_token %}
+                        <div class="form-grid">
+                            <div class="input-field">
+                                <label>  Email </label>
+                                <input type="email" name="email" id="email" placeholder="Username or Email" required="">
+                            </div>
+                            <div class="input-field">
+                                <label> Password</label>
+                                <input type="password" name="password" id="Password" placeholder="Password" required="">
+                            </div>
+                        </div>
+                    
+                        <button type="submit" class="btn btn-primary btn-style">Login now</button>
+                    </form>
+                </div>
+              
+            </div>
+        <!-- //main content -->
+        <!-- footer -->
+        
+    </div>
+
+    <!-- fontawesome v5-->
+    <script src="{% static 'js/fontawesome.js' %}"></script>
+
+</body>
+
+</html>
+{% endblock %}
